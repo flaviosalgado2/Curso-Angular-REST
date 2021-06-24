@@ -8,15 +8,32 @@ import { FormsModule } from '@angular/forms';
 
 //adicionado - para fazer requisicoes AJAX
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+
+//adicionado para posssibilitar rotas no Angular
+import { RouterModule, Routes } from '@angular/router';
+import { ModuleWithProviders } from '@angular/compiler/src/core';
+import { LoginComponent } from './login/login.component';
+
+export const appRouters: Routes = [
+  {path : 'home', component : HomeComponent},
+  {path : 'login', component : LoginComponent},
+  {path : '', component : LoginComponent}
+];
+
+export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]

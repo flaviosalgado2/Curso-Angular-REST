@@ -1,0 +1,11 @@
+#instalar bootstrap no Angular
+npm install bootstrap@4.1.3 jquery@3.3.1 popper.js@1.14.3 --save
+
+#criar um classe
+ng generate class AppConstants --skipTests=true
+
+#criar um servico no Angular
+ng generate service LoginService --skipTests=true
+
+#criar um componente no Angular
+ng generate component Home -skipTests=true
