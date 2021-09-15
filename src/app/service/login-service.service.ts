@@ -14,6 +14,9 @@ export class LoginServiceService {
   constructor(private http: HttpClient, private router : Router) { }
 
   login(usuario) {
+
+    console.log(usuario);
+
     return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe(data => {
 
       //corpo do meu retorno http
@@ -21,12 +24,12 @@ export class LoginServiceService {
 
       localStorage.setItem("token", token);
 
-      //console.info("Token: " + localStorage.getItem("token"));
+      console.info("Token: " + localStorage.getItem("token"));
 
       this.router.navigate(['home']);
 
     },
-      error => {
+    error => {
         console.error("Erro ao fazer login");
         alert('Acesso Negado!');
       }

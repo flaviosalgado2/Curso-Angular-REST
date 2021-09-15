@@ -9,3 +9,10 @@ ng generate service LoginService --skipTests=true
 
 #criar um componente no Angular
 ng generate component Home -skipTests=true
+
+#usuario para testes
+ronaldo
+123
+
+#rodar projeto Angular
+ng serve
