@@ -17,20 +17,23 @@ import { LoginComponent } from './login/login.component';
 
 //interceptacao de token requisicao
 import { HttpInterceptorModule } from './service/header-interceptor.service';
+import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
 
 export const appRouters: Routes = [
-  {path : 'home', component : HomeComponent},
-  {path : 'login', component : LoginComponent},
-  {path : '', component : LoginComponent}
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: 'usuarioList', component: UsuarioComponent }
 ];
 
-export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
+export const routes: ModuleWithProviders = RouterModule.forRoot(appRouters);
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

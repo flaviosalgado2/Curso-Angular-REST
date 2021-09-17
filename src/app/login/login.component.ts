@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   //atributos criados
   usuario = { login: '', senha: '' };
 
-  constructor(private loginService: LoginServiceService){}
+  constructor(private loginService: LoginServiceService) { }
 
   //metodo criado
   public login() {
