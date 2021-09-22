@@ -16,3 +16,10 @@ ronaldo
 
 #rodar projeto Angular
 ng serve
+
+#gerar build de implantacao do projeto Angular
+ng build -c production --base-href /angular8/
+
+#erro em login CORS
+pode ser que tenha que clicar em sair da aplicacao,
+para limpar token no storage do navegador
