@@ -3,6 +3,15 @@
 </div>
 
 <div class="container mt-5">
+  <form class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome" placeholder="Pesquisa por nome">
+    </div>
+    <button type="submit" (click)="consultarUser()" class="btn btn-primary mb-2">Buscar</button>
+  </form>
+</div>
+
+<div class="container mt-5">
   <table class="table">
     <thead class="thead-dark">
       <tr>

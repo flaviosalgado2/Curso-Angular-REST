@@ -9,15 +9,18 @@ import { AppConstants } from '../app-constants';
 export class UsuarioService {
 
   constructor(private http: HttpClient) {
-
   }
 
   getStudentList(): Observable<any> {
     return this.http.get<any>(AppConstants.baseUrl);
   }
 
-  deletarUsuario(id: number): Observable<any> {
+  deletarUsuario(id: Number): Observable<any> {
     return this.http.delete(AppConstants.baseUrl + id, { responseType: 'text' });
+  }
+
+  consultarUser(nome: String): Observable<any> {
+    return this.http.get(AppConstants.baseUrl + "usuarioPorNome/" + nome);
   }
 
 }
