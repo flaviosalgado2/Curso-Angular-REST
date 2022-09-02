@@ -26,3 +26,6 @@ ng build -c production --base-href /angular8/
 #erro em login CORS
 pode ser que tenha que clicar em sair da aplicacao,
 para limpar token no storage do navegador
+
+#criando guardiao
+ng generate guard Guardiao
